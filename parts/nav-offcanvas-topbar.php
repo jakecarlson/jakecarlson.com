@@ -6,11 +6,9 @@
  */
 ?>
 
-<div class="top-bar" id="top-bar-menu">
+<div class="top-bar row" id="top-bar-menu">
 	<div class="top-bar-left float-left">
-		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
-		</ul>
+		<a href="<?php echo home_url(); ?>" class="brand-title"><?php bloginfo('name'); ?></a>
 	</div>
 	<div class="top-bar-right show-for-medium">
 		<?php joints_top_nav(); ?>	

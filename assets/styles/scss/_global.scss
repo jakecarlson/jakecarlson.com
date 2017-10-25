@@ -4,10 +4,57 @@ Stylesheet: Global Stylesheet
 
 *************************************************/
 
+@import url('//fast.fonts.net/cssapi/3a5bfc22-2909-427d-9417-fca27c6aaa28.css');
+
+.container {
+	max-width: 62.5rem;
+	margin: 0 auto;
+}
+
+/*********************
+GENERAL STYLE OVERRIDES
+*********************/
+address {
+	font-style: normal;
+}
+dl dt {
+	font-weight: 700;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+.header {
+	margin-bottom: 2.5rem;
+}
+.top-bar {
+	//max-width: 62.5rem;
+	//margin: 0 auto;
+	position: relative;
+	height: 4rem;
+	color: white;
+	a {
+		color: white;
+	}
+}
+.brand-title {
+	position: absolute;
+	left: .9375rem;
+	bottom: -1.2rem;
+	font-weight: 800;
+	font-size: 3rem;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 .page-title {
+
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	letter-spacing: .1rem;
 	
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
@@ -398,6 +445,7 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
+	padding-top: 4rem;
 	li{
 		list-style: none;
 	}
@@ -407,7 +455,61 @@ SIDEBARS & ASIDES
 	ul {
 		margin: 0;
 	}
+	margin-bottom: 1.5rem;
 }
+
+.widgettitle {
+	font-weight: 800;
+	letter-spacing: .05rem;
+	border-bottom: 1px solid map-get($foundation-palette, 'primary');
+	text-transform: uppercase;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: map-get($foundation-palette, 'primary');
+}
+
+.def-cols,
+.def-rows
+{
+	dt,
+	dd {
+		line-height: 1.4;
+	}
+}
+
+.def-cols {
+	dt {
+		float: left;
+		width: 4rem;
+		clear: left;
+		margin-bottom: 0;
+		margin-top: .75rem;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:after {
+			content: ":";
+		}
+	}
+	dd {
+		margin-left: 4.5rem;
+	}
+	dt + dd {
+		margin-top: .75rem;
+	}
+}
+
+.def-rows {
+	dt {
+		margin-bottom: 0;
+		margin-top: .75rem;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -431,4 +533,67 @@ PLUGIN STYLES
 .gform_body ul {
     list-style: none outside none;
     margin: 0;
+}
+
+/*********************
+SECTIONS
+*********************/
+.section {
+	margin-bottom: 2rem;
+	clear: both;
+}
+.section-title {
+	font-weight: 800;
+	letter-spacing: .05rem;
+	border-bottom: 1px solid map-get($foundation-palette, 'primary');
+	text-transform: uppercase;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: map-get($foundation-palette, 'primary');
+}
+
+/*********************
+EXPERIENCE
+*********************/
+.experience {
+	clear: both;
+	margin-bottom: 2rem;
+}
+.experience-summary {
+	clear: both;
+	margin-bottom: 1em;
+	@include clearfix;
+}
+@include breakpoint(medium up) {
+	.experience-title,
+	.experience-company
+	{
+		float: left;
+		clear: left;
+		width: 75%;
+	}
+	.experience-years,
+	.experience-location
+	{
+		float: right;
+		clear: right;
+		width: 25%;
+		text-align: right;
+	}
+}
+.experience-title {
+	margin-bottom: 0;
+	> h3 {
+		font-size: 1rem;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-weight: 700;
+		line-height: 1.6;
+	}
+}
+.experience-years {
+	font-weight: 700;
+}
+.experience-description {
+	clear: both;
 }
