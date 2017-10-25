@@ -48,6 +48,11 @@ HEADER STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.post {
+	margin-bottom: 2rem;
+}
+
+
 .page-title {
 
 	font-size: 1.5rem;
@@ -63,6 +68,31 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.article-header {
+	margin-bottom: 1rem;
+}
+
+.archive,
+.home {
+	.entry-title {
+		font-weight: 800;
+		letter-spacing: .05rem;
+		border-bottom: 1px solid map-get($foundation-palette, 'primary');
+		text-transform: uppercase;
+		font-size: 1rem;
+		margin-bottom: .25rem;
+		color: map-get($foundation-palette, 'primary');
+	}
+}
+
+.single-title {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	margin-bottom: .25rem;
+}
+
 // Post meta  
 .byline {
 	color: #999;
@@ -75,6 +105,14 @@ POSTS & CONTENT STYLES
 	img {
 		max-width: 100%;
 		height: auto;
+	}
+
+	h2 {
+		font-size: 1rem;
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+		font-weight: 700;
+		line-height: 1.6;
 	}
 
 	.alignleft, img.alignleft { 
@@ -103,7 +141,7 @@ POSTS & CONTENT STYLES
 		background: #eee;
 		border: 1px solid #cecece;
 		padding: 10px;
-		}
+	}
 
 } 
 
@@ -449,6 +487,9 @@ SIDEBARS & ASIDES
 	li{
 		list-style: none;
 	}
+}
+.home .sidebar {
+	padding-top: 0;
 }
 
 .widget {

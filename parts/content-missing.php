@@ -9,7 +9,7 @@
 	<?php if ( is_search() ) : ?>
 		
 		<header class="article-header">
-			<h1><?php _e( 'Sorry, No Results.', 'jointswp' );?></h1>
+			<h1 class="entry-title"><?php _e( 'Sorry, No Results.', 'jointswp' );?></h1>
 		</header>
 		
 		<section class="entry-content">
@@ -27,7 +27,7 @@
 	<?php else: ?>
 	
 		<header class="article-header">
-			<h1><?php _e( 'Oops, Post Not Found!', 'jointswp' ); ?></h1>
+			<h1 class="entry-title"><?php _e( 'Oops, Post Not Found!', 'jointswp' ); ?></h1>
 		</header>
 		
 		<section class="entry-content">

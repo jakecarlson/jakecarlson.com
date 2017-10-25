@@ -16,7 +16,7 @@ get_header(); ?>
 				<article class="content-not-found">
 				
 					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
 					</header> <!-- end article header -->
 			
 					<section class="entry-content">
