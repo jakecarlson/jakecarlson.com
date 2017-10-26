@@ -1,3 +1,5 @@
+@import 'mixins';
+
 /************************************************
 
 Stylesheet: Global Stylesheet
@@ -18,6 +20,11 @@ address {
 	font-style: normal;
 }
 dl dt {
+	font-weight: 700;
+}
+strong,
+b
+{
 	font-weight: 700;
 }
 
@@ -55,11 +62,7 @@ POSTS & CONTENT STYLES
 
 .page-title {
 
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 2rem;
-	letter-spacing: .1rem;
+	@include page-title;
 	
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
@@ -73,24 +76,22 @@ POSTS & CONTENT STYLES
 }
 
 .archive,
-.home {
+.search,
+.home
+{
 	.entry-title {
-		font-weight: 800;
-		letter-spacing: .05rem;
-		border-bottom: 1px solid map-get($foundation-palette, 'primary');
-		text-transform: uppercase;
-		font-size: 1rem;
+		@include section-title;
 		margin-bottom: .25rem;
-		color: map-get($foundation-palette, 'primary');
 	}
 }
 
 .single-title {
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: .1rem;
+	@include page-title;
 	margin-bottom: .25rem;
+}
+
+.archive-title {
+	@include page-title;
 }
 
 // Post meta  
@@ -108,11 +109,7 @@ POSTS & CONTENT STYLES
 	}
 
 	h2 {
-		font-size: 1rem;
-		margin-top: 1rem;
-		margin-bottom: .5rem;
-		font-weight: 700;
-		line-height: 1.6;
+		@include section-title;
 	}
 
 	.alignleft, img.alignleft { 
@@ -500,13 +497,7 @@ SIDEBARS & ASIDES
 }
 
 .widgettitle {
-	font-weight: 800;
-	letter-spacing: .05rem;
-	border-bottom: 1px solid map-get($foundation-palette, 'primary');
-	text-transform: uppercase;
-	font-size: 1rem;
-	margin-bottom: 1rem;
-	color: map-get($foundation-palette, 'primary');
+	@include section-title;
 }
 
 .def-cols,
@@ -551,6 +542,28 @@ SIDEBARS & ASIDES
 
 }
 
+.screen-reader-text {
+	position: absolute;
+	left: -999rem;
+	top: -999rem;
+}
+@media screen and (min-width: 62.5rem) {
+	.sidebar {
+		.search-form {
+			@include clearfix;
+			label {
+				float: left;
+				width: 12rem;
+			}
+		}
+		.search-submit {
+			position: relative;
+			top: -1px;
+			float: right;
+		}
+	}
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -584,13 +597,7 @@ SECTIONS
 	clear: both;
 }
 .section-title {
-	font-weight: 800;
-	letter-spacing: .05rem;
-	border-bottom: 1px solid map-get($foundation-palette, 'primary');
-	text-transform: uppercase;
-	font-size: 1rem;
-	margin-bottom: 1rem;
-	color: map-get($foundation-palette, 'primary');
+	@include section-title;
 }
 
 /*********************

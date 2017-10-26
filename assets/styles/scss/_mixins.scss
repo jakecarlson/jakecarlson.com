@@ -1,0 +1,17 @@
+@mixin page-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.95rem;
+  letter-spacing: .1rem;
+}
+
+@mixin section-title {
+  font-weight: 800;
+  letter-spacing: .05rem;
+  border-bottom: 1px solid map-get($foundation-palette, 'primary');
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: map-get($foundation-palette, 'primary');
+}
