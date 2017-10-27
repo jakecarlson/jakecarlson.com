@@ -27,6 +27,21 @@ b
 {
 	font-weight: 700;
 }
+a:hover,
+a:active
+{
+	text-decoration: underline;
+}
+
+/*********************
+OFF-CANVAS MENU
+*********************/
+.off-canvas {
+	background-color: map-get($foundation-palette, 'primary');
+	a {
+		color: white;
+	}
+}
 
 /*********************
 HEADER STYLES
@@ -46,24 +61,42 @@ HEADER STYLES
 }
 .brand-title {
 	position: absolute;
-	left: .9375rem;
-	bottom: -1.2rem;
 	font-weight: 800;
-	font-size: 3rem;
+	left: .9375rem;
+	bottom: -.8rem;
+	font-size: 2rem;
+	z-index: 10;
+}
+@include breakpoint(medium up) {
+	.brand-title {
+		bottom: -1.2rem;
+		font-size: 3rem;
+	}
+}
+.top-bar-right.show-for-small-only .menu li {
+	position: absolute;
+	right: -.5rem;
+	top: -2rem;
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+.content {
+	a {
+		text-decoration: underline;
+	}
+}
+
 .post {
 	margin-bottom: 2rem;
 }
 
-
 .page-title {
 
 	@include page-title;
-	
+
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
 		border: 0px;
@@ -94,15 +127,15 @@ POSTS & CONTENT STYLES
 	@include page-title;
 }
 
-// Post meta  
+// Post meta
 .byline {
 	color: #999;
 	time {}
 }
 
-// Entry content  
+// Entry content
 .entry-content {
-	
+
 	img {
 		max-width: 100%;
 		height: auto;
@@ -112,27 +145,27 @@ POSTS & CONTENT STYLES
 		@include section-title;
 	}
 
-	.alignleft, img.alignleft { 
-		margin-right: 1.5em; 
-		display: inline; 
-		float: left; 
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
 	}
-	.alignright, img.alignright { 
-		margin-left: 1.5em; 
-		display: inline; 
-		float: right; 
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
 	}
-	.aligncenter, img.aligncenter { 
-		margin-right: auto; 
-		margin-left: auto; 
-		display: block; 
-		clear: both; 
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
 	}
-			
+
 	video, object {
 		max-width: 100%;
 		height: auto;
-		}
+	}
 
 	pre {
 		background: #eee;
@@ -140,14 +173,14 @@ POSTS & CONTENT STYLES
 		padding: 10px;
 	}
 
-} 
+}
 
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
 	padding: 5px;
 
-	// Images inside wp-caption  
+	// Images inside wp-caption
 	img {
 		max-width: 100%;
 		margin-bottom: 0;
@@ -159,7 +192,7 @@ POSTS & CONTENT STYLES
 		margin: 4px 0 7px;
 		text-align: center;
 	}
-} 
+}
 
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
@@ -174,14 +207,14 @@ IMAGE GALLERY STYLES
 	margin-left: auto;
 	margin-right: auto;
 	margin-right: -15px;
-	margin-left: -15px; 
+	margin-left: -15px;
 }
 .gallery::before, .gallery::after {
 	content: ' ';
-	display: table; 
+	display: table;
 }
 .gallery::after {
-	clear: both; 
+	clear: both;
 }
 .gallery.gallery-columns-1 > dl {
 	@include grid-column;
@@ -211,11 +244,11 @@ IMAGE GALLERY STYLES
 	width: 100%;
 	float: left;
 	padding-left: 0.9375rem;
-	padding-right: 0.9375rem; 
+	padding-right: 0.9375rem;
 }
 .gallery dl:last-child:not(:first-child) {
-  float: right; 
- }
+	float: right;
+}
 
 // Gallery caption styles
 .gallery-caption {}
@@ -268,7 +301,7 @@ COMMENT STYLES
 			.alt {}
 			.odd {}
 			.even {}
-			.depth-1 {}           // Change number for different depth  
+			.depth-1 {}           // Change number for different depth
 			.byuser {}
 			.bypostauthor {}
 			.comment-author-admin {}
@@ -297,7 +330,7 @@ COMMENT STYLES
 	li.depth-4 {}
 	li.depth-5 {}
 
-	// General comment classes  
+	// General comment classes
 	.alt {}
 	.odd {
 	}
@@ -314,7 +347,7 @@ COMMENT STYLES
 	.thread-odd {}
 	.thread-even {}
 
-	// vcard  
+	// vcard
 	.vcard {
 		margin-left: 50px;
 
@@ -351,10 +384,10 @@ COMMENT STYLES
 			background: #fff;
 		}
 
-	} // end .commentlist .vcard  
+	} // end .commentlist .vcard
 
 
-	// comment meta  
+	// comment meta
 	.comment-meta {
 
 		a {}
@@ -367,7 +400,7 @@ COMMENT STYLES
 
 	}
 
-	// comment content  
+	// comment content
 	.comment_content {
 
 		p {
@@ -376,20 +409,20 @@ COMMENT STYLES
 			line-height: 1.5em;
 		}
 
-	} // end .commentlist .comment_content  
+	} // end .commentlist .comment_content
 
-	// comment reply link  
+	// comment reply link
 	.comment-reply-link {
 		float: right;
 
 		&:hover,
 		&:focus {
-		
+
 		}
 
-	} // end .commentlist .comment-reply-link  
+	} // end .commentlist .comment-reply-link
 
-} // end .commentlist  
+} // end .commentlist
 
 /*********************
 COMMENT FORM STYLES
@@ -425,15 +458,15 @@ COMMENT FORM STYLES
 				background: #fff;
 			}
 
-			// form validation  
+			// form validation
 			&:invalid {
 				outline: none;
 				border-color: #fbc2c4;
 				background-color: #f6e7eb;
 				-webkit-box-shadow: none;
-				   -moz-box-shadow: none;
-				    -ms-box-shadow: none;
-						box-shadow: none;
+				-moz-box-shadow: none;
+				-ms-box-shadow: none;
+				box-shadow: none;
 			}
 		}
 
@@ -453,25 +486,25 @@ COMMENT FORM STYLES
 	}
 }
 
-// comment form title  
+// comment form title
 #comment-form-title {
 	margin: 0 0 1.1em;
 }
 
-// cancel comment reply link  
+// cancel comment reply link
 #cancel-comment-reply {
 	a {}
 }
 
-// logged in comments  
+// logged in comments
 .comments-logged-in-as {}
 
-// allowed tags  
+// allowed tags
 #allowed_tags {
 	margin: 1.5em 10px 0.7335em 0;
 }
 
-// No comments  
+// No comments
 .nocomments {
 	margin: 0 20px 1.1em;
 }
@@ -596,7 +629,7 @@ VISUAL EDITOR STYLES
 *********************/
 // Makes content look better in visual editor
 body#tinymce {
-   	margin: 20px;
+	margin: 20px;
 }
 
 /*********************
@@ -604,8 +637,8 @@ PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
 .gform_body ul {
-    list-style: none outside none;
-    margin: 0;
+	list-style: none outside none;
+	margin: 0;
 }
 
 /*********************
