@@ -573,7 +573,7 @@ FOOTER STYLES
 	text-align: center;
 	.menu {
 		margin: 0 auto;
-		width: 11rem;
+		width: 9rem;
 	}
 	.copyright {
 		margin-top: 1rem;
@@ -673,12 +673,13 @@ img.social-icon {
 	height: 1rem;
 }
 .social-icon {
-	margin-right: .5rem;
-	margin-left: .5rem;
+	margin-right: .25rem;
+	margin-left: .25rem;
 }
 @include breakpoint(medium up) {
 	.social-icon {
 		margin-left: 0;
+		margin-right: .5rem;
 	}
 }
 .social-icon a {
