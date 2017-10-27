@@ -84,8 +84,12 @@ POSTS & CONTENT STYLES
 *********************/
 
 .content {
-	a {
-		text-decoration: underline;
+	h2,
+	h3,
+	h4 {
+		a {
+			text-decoration: none;
+		}
 	}
 }
 
