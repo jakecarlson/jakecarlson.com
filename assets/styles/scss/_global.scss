@@ -571,6 +571,9 @@ FOOTER STYLES
 	clear: both;
 	margin-top: 1em;
 }
+.copyright {
+	text-align: right;
+}
 	
 /*********************
 VISUAL EDITOR STYLES
@@ -649,7 +652,31 @@ EXPERIENCE
 /*********************
 SOCIAL ICON
 *********************/
-.social-icon {
+img.social-icon {
 	width: 1rem;
 	height: 1rem;
+}
+.social-icon {
+	margin-right: .5rem;
+}
+.social-icon a {
+	display: block;
+	width: 1.75rem;
+	height: 1.75rem;
+	padding: 0;
+	background: transparent none no-repeat center center;
+	background-size: 100% 100%;
+	text-indent: -999rem;
+}
+.social-icon.linkedin a {
+	background-image: url('../images/fc-webicon-linkedin.svg');
+}
+.social-icon.github a {
+	background-image: url('../images/fc-webicon-github.svg');
+}
+.social-icon.facebook a {
+	background-image: url('../images/fc-webicon-facebook.svg');
+}
+.social-icon.twitter a {
+	background-image: url('../images/fc-webicon-twitter.svg');
 }
