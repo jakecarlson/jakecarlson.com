@@ -570,11 +570,27 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	margin-top: 1em;
+	text-align: center;
+	.menu {
+		margin: 0 auto;
+		width: 11rem;
+	}
+	.copyright {
+		margin-top: 1rem;
+	}
 }
-.copyright {
-	text-align: right;
+@include breakpoint(medium up) {
+	.footer {
+		.menu {
+			margin: 0;
+		}
+		.copyright {
+			margin-top: 0;
+			text-align: right;
+		}
+	}
 }
-	
+
 /*********************
 VISUAL EDITOR STYLES
 *********************/
@@ -658,6 +674,12 @@ img.social-icon {
 }
 .social-icon {
 	margin-right: .5rem;
+	margin-left: .5rem;
+}
+@include breakpoint(medium up) {
+	.social-icon {
+		margin-left: 0;
+	}
 }
 .social-icon a {
 	display: block;
