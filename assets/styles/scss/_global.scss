@@ -517,13 +517,18 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-	padding-top: 4rem;
-	li{
+	li {
 		list-style: none;
 	}
 }
-.home .sidebar {
-	padding-top: 0;
+
+@include breakpoint(medium up) {
+	.sidebar {
+		padding-top: 4rem;
+	}
+	.home .sidebar {
+		padding-top: 0;
+	}
 }
 
 .widget {
