@@ -57,6 +57,16 @@ HEADER STYLES
 	color: white;
 	a {
 		color: white;
+		border-bottom: 2px solid transparent;
+
+	}
+	li:hover,
+	.active
+	{
+		a {
+			text-decoration: none;
+			border-color: white;
+		}
 	}
 }
 .brand-title {
