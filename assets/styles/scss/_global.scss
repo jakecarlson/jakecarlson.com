@@ -603,7 +603,7 @@ SIDEBARS & ASIDES
 	left: -999rem;
 	top: -999rem;
 }
-@media screen and (min-width: 62.5rem) {
+@media (min-width: 62.5rem) {
 	.sidebar {
 		.search-form {
 			@include clearfix;
