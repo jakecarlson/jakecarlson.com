@@ -97,6 +97,10 @@ POSTS & CONTENT STYLES
 	margin-bottom: 2rem;
 }
 
+.excerpt-read-more {
+	//white-space: nowrap;
+}
+
 .page-title {
 
 	@include page-title;
