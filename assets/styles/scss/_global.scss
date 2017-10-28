@@ -56,9 +56,12 @@ HEADER STYLES
 	height: 4rem;
 	color: white;
 	a {
+
 		color: white;
 		border-bottom: 2px solid transparent;
-
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: -2px;
 	}
 	li:hover,
 	.active
