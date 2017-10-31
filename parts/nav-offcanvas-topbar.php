@@ -8,7 +8,11 @@
 
 <div class="top-bar row" id="top-bar-menu">
 	<div class="top-bar-left float-left">
-		<a href="<?php echo home_url(); ?>" class="brand-title"><?php bloginfo('name'); ?></a>
+        <?php if (is_home()) { ?>
+            <h1 class="brand-title"><?php bloginfo('name'); ?></h1>
+        <?php } else { ?>
+            <a href="<?php echo home_url(); ?>" class="brand-title"><?php bloginfo('name'); ?></a>
+        <?php } ?>
 	</div>
 	<div class="top-bar-right show-for-medium">
 		<?php joints_top_nav(); ?>	
