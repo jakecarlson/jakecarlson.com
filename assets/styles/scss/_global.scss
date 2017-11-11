@@ -728,6 +728,61 @@ EXPERIENCE
 }
 
 /*********************
+SKILLS
+*********************/
+.skills-list-skill,
+.skills-list-description,
+.skills-list-rating
+{
+	display: inline-block;
+}
+.skills-list-skill {
+	margin-top: .75rem;
+	width: 55%;
+	margin-bottom: 0;
+}
+.skills-list-skill:first-child {
+	margin-top: 0;
+}
+.skills-list-description {
+	display: block;
+}
+
+.skills-list-rating {
+	margin-left: -.3rem;
+	width: 45%;
+	height: 1rem;
+	background: #ccc;
+	position: relative;
+	top: .25rem;
+	text-indent: -999rem;
+}
+.skills-list-rating:after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #c00;
+}
+.skills-list-rating-novice:after {
+	width: 20%;
+}
+.skills-list-rating-competent:after {
+	width: 40%;
+}
+.skills-list-rating-experienced:after {
+	width: 60%;
+}
+.skills-list-rating-veteran:after {
+	width: 80%;
+}
+.skills-list-rating-master:after {
+	width: 100%;
+}
+
+/*********************
 SOCIAL ICON
 *********************/
 img.social-icon {
