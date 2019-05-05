@@ -561,6 +561,9 @@ SIDEBARS & ASIDES
 .widgettitle {
 	@include section-title;
 }
+.widget_media_image {
+	border-bottom: 2px solid map-get($foundation-palette, 'primary');
+}
 
 .def-cols,
 .def-rows
