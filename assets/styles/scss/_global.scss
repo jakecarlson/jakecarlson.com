@@ -134,7 +134,7 @@ POSTS & CONTENT STYLES
 
 .archive,
 .search,
-.home
+.blog
 {
 	.entry-title {
 		@include section-title;
@@ -153,7 +153,7 @@ POSTS & CONTENT STYLES
 
 // Post meta
 .byline {
-	color: #999;
+	color: $dark-gray;
 	time {}
 }
 
@@ -171,11 +171,13 @@ POSTS & CONTENT STYLES
 
 	.alignleft, img.alignleft {
 		margin-right: 1.5em;
+		margin-bottom: .5em;
 		display: inline;
 		float: left;
 	}
 	.alignright, img.alignright {
 		margin-left: 1.5em;
+		margin-bottom: .5em;
 		display: inline;
 		float: right;
 	}
@@ -192,8 +194,8 @@ POSTS & CONTENT STYLES
 	}
 
 	pre {
-		background: #eee;
-		border: 1px solid #cecece;
+		background: $light-gray;
+		border: 1px solid $medium-gray;
 		padding: 10px;
 	}
 
@@ -201,7 +203,7 @@ POSTS & CONTENT STYLES
 
 .wp-caption {
 	max-width: 100%;
-	background: #eee;
+	background: $light-gray;
 	padding: 5px;
 
 	// Images inside wp-caption
@@ -387,7 +389,7 @@ COMMENT STYLES
 			float: right;
 
 			a {
-				color: #999;
+				color: $dark-gray;
 				text-decoration: none;
 
 				&:hover {
@@ -404,8 +406,8 @@ COMMENT STYLES
 			position: absolute;
 			left: 10px;
 			padding: 2px;
-			border: 1px solid #cecece;
-			background: #fff;
+			border: 1px solid $medium-gray;
+			background: $white;
 		}
 
 	} // end .commentlist .vcard
@@ -474,19 +476,19 @@ COMMENT FORM STYLES
 		input[type=url],
 		textarea {
 			padding: 3px 6px;
-			background: #efefef;
-			border: 2px solid #cecece;
+			background: $light-gray;
+			border: 2px solid $medium-gray;
 			line-height: 1.5em;
 
 			&:focus {
-				background: #fff;
+				background: $white;
 			}
 
 			// form validation
 			&:invalid {
 				outline: none;
-				border-color: #fbc2c4;
-				background-color: #f6e7eb;
+				border-color: map-get($foundation-palette, 'primary');
+				background-color: map-get($foundation-palette, 'alert');
 				-webkit-box-shadow: none;
 				-moz-box-shadow: none;
 				-ms-box-shadow: none;
@@ -545,9 +547,6 @@ SIDEBARS & ASIDES
 @include breakpoint(medium up) {
 	.sidebar {
 		padding-top: 4rem;
-	}
-	.home .sidebar {
-		padding-top: 0;
 	}
 }
 
@@ -638,10 +637,11 @@ FOOTER STYLES
 	text-align: center;
 	.menu {
 		margin: 0 auto;
-		width: 9rem;
+		width: 11.25rem;
 	}
 	.copyright {
 		margin-top: 1rem;
+		color: $dark-gray;
 	}
 }
 @include breakpoint(medium up) {
@@ -823,4 +823,7 @@ img.social-icon {
 }
 .social-icon.twitter a {
 	background-image: url('../images/fc-webicon-twitter.svg');
+}
+.social-icon.rss a {
+	background-image: url('../images/fc-webicon-rss.svg');
 }

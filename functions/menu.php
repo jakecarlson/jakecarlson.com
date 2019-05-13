@@ -80,7 +80,7 @@ function joints_footer_links_fallback() {
 
 // Add Foundation active class to menu
 function required_active_nav_class( $classes, $item ) {
-    if ( $item->current == 1 || $item->current_item_ancestor == true ) {
+    if ( $item->current || $item->current_item_ancestor ) {
         $classes[] = 'active';
     }
     return $classes;
