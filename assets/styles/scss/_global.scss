@@ -108,6 +108,9 @@ POSTS & CONTENT STYLES
 		}
 	}
 }
+.inner-content {
+	position: relative;
+}
 
 .post {
 	margin-bottom: 2rem;
@@ -130,6 +133,12 @@ POSTS & CONTENT STYLES
 
 .article-header {
 	margin-bottom: 1rem;
+}
+.resume-pdf {
+	position: absolute;
+	top: 0;
+	right: 1.875rem;
+	line-height: 2.125rem;
 }
 
 .archive,
@@ -741,7 +750,7 @@ SKILLS
 }
 .skills-list-skill {
 	margin-top: .75rem;
-	width: 55%;
+	width: 66.66%;
 	margin-bottom: 0;
 }
 .skills-list-skill:first-child {
@@ -753,7 +762,7 @@ SKILLS
 
 .skills-list-rating {
 	margin-left: -.3rem;
-	width: 45%;
+	width: 33.33%;
 	height: 1rem;
 	background-color: $light-gray;
 	position: relative;
@@ -770,18 +779,12 @@ SKILLS
 	background-color: map-get($foundation-palette, 'primary');;
 }
 .skills-list-rating-novice:after {
-	width: 20%;
+	width: 33.33%;
 }
-.skills-list-rating-competent:after {
-	width: 40%;
+.skills-list-rating-intermediate:after {
+	width: 66.66%;
 }
-.skills-list-rating-experienced:after {
-	width: 60%;
-}
-.skills-list-rating-veteran:after {
-	width: 80%;
-}
-.skills-list-rating-master:after {
+.skills-list-rating-advanced:after {
 	width: 100%;
 }
 
